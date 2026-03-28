@@ -86,7 +86,7 @@ input[type=text]::placeholder, input[type=password]::placeholder {
 }
 
 .showPassword input[type="checkbox"]:checked ~ .showPassword::before {
-    filter: invert(50%) sepia(100%) saturate(746%) hue-rotate(350deg)
+    filter: invert(50%) sepia(100%) saturate(750%) hue-rotate(350deg)
             brightness(102%) contrast(101%) ;
     opacity: 1;
     
