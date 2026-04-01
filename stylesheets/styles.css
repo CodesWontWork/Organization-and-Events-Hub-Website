@@ -1,0 +1,123 @@
+
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* flex-grow: 1; */
+    /* gap: 50vw; */
+    
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px ;
+}
+
+.signUp ,.logIn{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: max-content;
+}
+
+#signUp, #logIn {
+    display: none; 
+}
+
+#signUp.active, #logIn.active { display: block; }
+label {
+    font-size: 12px;
+    display: block;
+    margin-left: 5px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border-color: #125615;
+}
+
+input[type=text]::placeholder, input[type=password]::placeholder {
+    opacity: 0.5;
+}
+
+.showPassword {
+    margin: 10px 0px;
+    /* background-color: #125615; */
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+    
+}
+
+.showPassword input[type="checkbox"] {
+    position: relative;
+    display: none;
+}
+
+.showPassword::before {
+    content: url("../art/eye.svg");
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.3;
+
+}
+
+.showPassword.checked::before {
+    filter: invert(44%) sepia(50%) saturate(746%)
+            brightness(102%) contrast(101%) ;
+    opacity: 1;
+}
+
+.showPassword input[type="checkbox"]:checked ~ .showPassword::before {
+    filter: invert(50%) sepia(100%) saturate(750%) hue-rotate(350deg)
+            brightness(102%) contrast(101%) ;
+    opacity: 1;
+    
+}
+
+
+
+input[type=button] {
+    background-color: #afa04c;
+    color: white;
+    padding: 7px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #125615;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button{
+    border: none;
+    background-color: #d7bc21;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
