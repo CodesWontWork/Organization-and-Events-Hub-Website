@@ -1,14 +1,15 @@
 
-function togglePasswordVisibility() {
+function TogglePasswordVisibility() {
     const passwordInput = document.getElementById('password');
-    const checkbox = document.getElementById('showPassCheckbox');
-    const label = document.querySelector('.showPassword');
-    if (checkbox.checked) {
+    const ShowPasswordButton = document.getElementById('ShowPassButton');
+    const root = document.documentElement;
+
+    root.classList.toggle("showpass");
+
+    if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        label.classList.add('checked');
     } else {
         passwordInput.type = 'password';
-        label.classList.remove('checked');
     }
 }
 

@@ -1,7 +1,30 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --bg-color2: #f2f2f2;
+    --text-black: #000000;
+    --text-white: #ffffff;
+    --input-border: #cccccc;
+    --green1: #1e7c2b;
+
+}
+
+.darkmode {
+    --bg-color: #000000;
+    --bg-color2: #333333;
+    --text-black: #ffffff;
+    --text-white: #000000;
+    --input-border: #666666;
+    --green1: #1e7c2b;
+}
+
 
 body{
     height: 100vh;
-    background-color: black;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,9 +44,11 @@ h1{
 
 .signUp ,.logIn{
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: var(--bg-color2);
     padding: 20px;
     height: max-content;
+    width: 20vw;
+    min-width: 300px;
 }
 
 #signUp, #logIn {
@@ -42,61 +67,44 @@ input[type=text], input[type=password] {
     padding: 12px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type=text]:focus {
-    border-color: #125615;
+    border-color: var(--green1);
 }
 
 input[type=text]::placeholder, input[type=password]::placeholder {
     opacity: 0.5;
 }
 
-.showPassword {
-    margin: 10px 0px;
-    /* background-color: #125615; */
-    display: block;
+#passinputcon {
     position: relative;
-    width: 50px;
-    height: 30px;
-    padding-left: 10px;
-    
+    padding: 0px;
 }
 
-.showPassword input[type="checkbox"] {
-    position: relative;
-    display: none;
-}
-
-.showPassword::before {
-    content: url("../art/eye.svg");
+#ShowPassButton {
     position: absolute;
-    pointer-events: none;
-    opacity: 0.3;
+    right: 3%;
+    top: 29%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 
+    background-color: #999;
+    mask: url(../art/eye.svg) no-repeat center;
+    -webkit-mask: url(../art/eye.svg) no-repeat center;
 }
 
-.showPassword.checked::before {
-    filter: invert(44%) sepia(50%) saturate(746%)
-            brightness(102%) contrast(101%) ;
-    opacity: 1;
+.showpass #ShowPassButton {
+    background-color: #1e7c2b;
 }
-
-.showPassword input[type="checkbox"]:checked ~ .showPassword::before {
-    filter: invert(50%) sepia(100%) saturate(750%) hue-rotate(350deg)
-            brightness(102%) contrast(101%) ;
-    opacity: 1;
-    
-}
-
-
 
 input[type=button] {
-    background-color: #afa04c;
-    color: white;
+    background-color: var(--input-border);
+    color: var(--text-white);
     padding: 7px 14px;
     margin: 8px 0;
     border: none;
@@ -106,8 +114,8 @@ input[type=button] {
 
 input[type=submit] {
   width: 100%;
-  background-color: #125615;
-  color: white;
+  background-color: var(--green1);
+  color: var(--text-white);
   padding: 14px;
   margin: 8px 0;
   border: none;
@@ -117,7 +125,8 @@ input[type=submit] {
 
 button{
     border: none;
-    background-color: #d7bc21;
+    background-color: var(--green1);
+    color: var(--text-white);
     border-radius: 4px;
     padding: 5px 10px;
 }

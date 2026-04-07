@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="scripts/login.js"></script>
     <title>Sign Up to Org Find</title>
 </head>
@@ -60,12 +60,10 @@
                         <input type="text" id="email" name="email" placeholder="example@cvsu.edu.ph">
                     </div>
                     <div class="field">
-                        <label for="password">Enter Your Password:</label>
-                        <div style="display: flex; ">
+                        <label for="password">Enter Your Password</label>
+                        <div id="passinputcon">
                             <input type="password" id="password" name="password" placeholder="Enter Password">        
-                            <label class="showPassword" for="showPassCheckbox">
-                                <input type="checkbox" id="showPassCheckbox" onclick="togglePasswordVisibility()">
-                            </label>
+                            <div id="ShowPassButton" onclick="TogglePasswordVisibility()"></div>
                         </div>
                     </div>
                     <div class="options">   
