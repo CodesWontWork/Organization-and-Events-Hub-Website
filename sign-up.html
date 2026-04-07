@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="scripts/login.js"></script>
-    <title>Sign Up to Org Find</title>
+    <link rel="stylesheet" href="stylesheets/auth.css">
+    <title>Sign Up to ____</title>
 </head>
 <body>
     
@@ -31,15 +31,15 @@
                     </div>  
                     <div class="field">
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="example@cvsu.edu.ph">
+                        <input type="email" class="inputs" name="email" placeholder="example@cvsu.edu.ph">
                     </div>
                     <div class="field">
                         <label for="password">Create Your Password:</label>
-                        <input type="password" id="email" name="email" placeholder="A Strong Password">
+                        <input type="password" class="inputs" name="password" placeholder="A Strong Password">
                     </div>
                     <div class="field">
                         <label for="password">Confirm Your Password:</label>
-                        <input type="password" id="email" name="email" placeholder="Re-enter your password">
+                        <input type="password" class="inputs" name="confirm_password" placeholder="Re-enter your password">
                     </div>
 
                     <div class="options">
@@ -51,18 +51,18 @@
                 </p>
             </div>
         </div>
-        <div class="logIn " id="logIn">
+        <div class="logIn" id="logIn">
             
                 <h1>Log In</h1>
                 <form action="">
                     <div class="field">
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="example@cvsu.edu.ph">
+                        <input type="email" class="inputs" name="email" placeholder="example@cvsu.edu.ph">
                     </div>
                     <div class="field">
                         <label for="password">Enter Your Password</label>
-                        <div id="passinputcon">
-                            <input type="password" id="password" name="password" placeholder="Enter Password">        
+                        <div id="passinputcontainer">
+                            <input type="password" class="inputs" name="password" placeholder="Enter Password">        
                             <div id="ShowPassButton" onclick="TogglePasswordVisibility()"></div>
                         </div>
                     </div>
@@ -75,5 +75,7 @@
                 </p>
         </div>  
     </div>
+
+<script src="scripts/auth.js"></script>
 </body>
 </html>

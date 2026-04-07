@@ -1,0 +1,118 @@
+/* =========================
+   BODY & CONTAINER
+========================= */
+body {
+    height: 100vh;
+    background-color: var(--text-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* =========================
+   FORMS
+========================= */
+.signUp, .logIn {
+    border-radius: 5px;
+    background-color: var(--bg-color2);
+    padding: 20px;
+    height: max-content;
+    width: 20vw;
+    min-width: 300px;
+    display: none; /* hidden by default */
+}
+
+#signUp.active, #logIn.active {
+    display: block; /* shown when active */
+}
+
+/* =========================
+   LABELS & INPUTS
+========================= */
+label {
+    font-size: 12px;
+    display: block;
+    margin-left: 5px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    border-color: var(--green1);
+}
+
+input::placeholder {
+    opacity: 0.5;
+}
+
+/* =========================
+   PASSWORD TOGGLE
+========================= */
+#passinputcontainer {
+    position: relative;
+    padding: 0;
+}
+
+#ShowPassButton {
+    position: absolute;
+    right: 3%;
+    top: 29%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #999;
+    mask: url(../art/eye.svg) no-repeat center;
+    -webkit-mask: url(../art/eye.svg) no-repeat center;
+}
+
+.showpass #ShowPassButton {
+    background-color: #1e7c2b;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+input[type=button],
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: var(--green1);
+    color: var(--text-white);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--green1);
+    color: var(--text-white);
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
