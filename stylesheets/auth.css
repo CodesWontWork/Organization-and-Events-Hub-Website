@@ -1,7 +1,7 @@
 /* =========================
    BODY & CONTAINER
 ========================= */
-body {
+.body-container {
     height: 100vh;
     background-color: var(--text-black);
     display: flex;
@@ -17,7 +17,7 @@ body {
 /* =========================
    HEADINGS
 ========================= */
-h1 {
+.container h1 {
     text-align: center;
     padding-bottom: 30px;
 }
@@ -85,8 +85,8 @@ input::placeholder {
     height: 24px;
     cursor: pointer;
     background-color: #999;
-    mask: url(../art/eye.svg) no-repeat center;
-    -webkit-mask: url(../art/eye.svg) no-repeat center;
+    mask: url(../images/eye.svg) no-repeat center;
+    -webkit-mask: url(../images/eye.svg) no-repeat center;
 }
 
 .showpass #ShowPassButton {

@@ -1,22 +1,96 @@
 * {
     font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.html {
+    font-size: 10px;
 }
 
 :root {
-    --bg-color: #ffffff;
+    --bg-color1: #ffffff;
     --bg-color2: #f2f2f2;
     --text-black: #000000;
+    --text-black-light: #1a1a1a;
     --text-white: #ffffff;
+    --text-white-light: #f4f4f4;
     --input-border: #cccccc;
     --green1: #1e7c2b;
-
 }
 
 .darkmode {
-    --bg-color: #000000;
+    --bg-color1: #000000;
     --bg-color2: #333333;
     --text-black: #ffffff;
+    --text-black-light: #f4f4f4;
     --text-white: #000000;
+    --text-white-light: #1a1a1a;
     --input-border: #666666;
     --green1: #1e7c2b;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8% 10% 0.8% 10%;
+    background-color: var(--bg-color1);
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: var(--green1);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.header-title-box {
+    display: flex;
+    align-items: center;
+}
+
+.header-title h1 {
+    color: var(--text-black);
+    font-size: 1.3rem;
+}
+.header-title  p {
+    color: var(--text-black-light);
+    font-size: 0.7rem;
+}
+
+.navigation-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.2s, color 0.2s ease;
+}
+
+.navigation a:hover,nav a.active {
+    background-color: var(--green1);
+    color: var(--text-white);
+}
+
+
+.profile-button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--green1);
+    padding: 5px;
+    border-radius: 100%;
 }

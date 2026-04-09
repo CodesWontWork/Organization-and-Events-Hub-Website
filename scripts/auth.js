@@ -1,7 +1,6 @@
 
 function TogglePasswordVisibility() {
     const passwordInput = document.getElementById('password');
-    const ShowPasswordButton = document.getElementById('ShowPassButton');
     const root = document.documentElement;
 
     root.classList.toggle("showpass");
