@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/org.css">
+    <title>Organizations</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header-title-box">
+            <img src="images/hub-light-icon.png" alt="" class="header-logo">
+            <div class="header-title">
+                <h1>Organization and Events Hub</h1>
+                <p>Connecting you to the world of organizations and events</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="organizations.html" class="active">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Log In</a>
+            </nav>
+            <img src="images/moon-icon.png" alt="" class="dark-mode-toggle" onclick="toggledarkmode()">
+            <img src="images/user-icon.png" alt="" class="profile-button" link="login.html">
+        </div>
+    </header>
+        
+   <section class="org-event-header">
+        <h1>Student Organizations</h1>
+        <p>Explore the diverse range of student organizations at Cavite State University.</p>
+   </section>
+
+   <section class="org-event-search-tags-container">
+        <div class="search-tags-box">
+            <div class="search-box">
+                <input type="search" placeholder="Search...">
+            </div>
+            <div class="tags-box">
+                <p class="tags-pick-active" onclick="picktag(this)">All</p>
+                <p class="tags-pick" onclick="picktag(this)">Academic</p>
+                <p class="tags-pick" onclick="picktag(this)">Cultural</p>
+                <p class="tags-pick" onclick="picktag(this)">Sports</p>
+                <p class="tags-pick" onclick="picktag(this)">Service</p>
+                <p class="tags-pick" onclick="picktag(this)">Professional</p>
+            </div>
+        </div>
+        <div class="tags-only-box">
+            <h3>Filter by tags:</h3>
+            <div class="tags-boxes">
+                <p class="tags-pick-many" onclick="picktagmany(this)">Yay</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Academic</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Cultural</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Sports</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Service</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Professional</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Arts</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Science</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Technology</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Gaming</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Tourism</p>
+                <p class="tags-pick-many" onclick="picktagmany(this)">Tournaments</p>
+            </div>
+        </div>
+   </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-boxes">
+                <div class="footer-image-header-box">
+                    <img src="images/hub-light-icon.png" alt="">
+                    <h3>Organization and Events Hub</h3>
+                </div>
+                <p class="footer-disc">Your central hub for student organizations and campus events at Cavite State University.</p>
+            </div>
+            <div class="footer-boxes">
+                <h3>Quick Links</h3>
+                <a href="organization.html">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About Us</a>
+            </div>
+            
+            <div class="footer-boxes">
+                <h3>Contact Us</h3>
+                <p>Email: info@organization-events-hub.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Cavite State University, Indang, Cavite</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Organization and Events Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

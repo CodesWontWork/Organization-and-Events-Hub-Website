@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/home.css">
     <title>Home</title>
@@ -11,7 +16,7 @@
 <body>
     <header class="header-container">
         <div class="header-title-box">
-            <img src="images/hub-icon.png" alt="" class="header-logo">
+            <img src="images/hub-light-icon.png" alt="" class="header-logo">
             <div class="header-title">
                 <h1>Organization and Events Hub</h1>
                 <p>Connecting you to the world of organizations and events</p>
@@ -25,6 +30,7 @@
                 <a href="about.html">About Us</a>
                 <a href="login.html">Log In</a>
             </nav>
+            <img src="images/moon-icon.png" alt="" class="dark-mode-toggle" onclick="toggledarkmode()">
             <img src="images/user-icon.png" alt="" class="profile-button" link="login.html">
         </div>
     </header>
@@ -40,6 +46,157 @@
         </div>`
     </section>
 
-<link rel="script" href="scripts/home.js">
+    <section id="random-ahh-container">
+            <div class="rac-boxes">
+                <img src="images/randomahh-icon.png" alt="">
+                <h3>1</h3>
+                <p>random ahh text</p>
+            </div>
+            <div class="rac-boxes">
+                <img src="images/randomahh-icon.png" alt="">
+                <h3>2</h3>
+                <p>random ahh text</p>
+            </div>
+            <div class="rac-boxes">
+                <img src="images/randomahh-icon.png" alt="">
+                <h3>3</h3>
+                <p>random ahh text</p>
+            </div>
+    </section>
+
+    <section id="popular-events-container">
+        <div id="pec-heading">
+            <div>
+                <h3>Popular Events</h3>
+                <p>Check out some of the most popular events in the community!</p>
+            </div>
+            <a href="events.html">View All Events</a>
+        </div>
+        <div id="pec-events">
+            <div class="pec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="discription-box">
+                    <p>nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy</p>
+                </div>
+                <p class="org-name">organization name</p>
+            </div>
+            <div class="pec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="discription-box">
+                    <p>plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this</p>
+                </div>
+                <p class="org-name">organization name</p>
+            </div>
+            <div class="pec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="discription-box">
+                    <p>tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash</p>
+                </div>
+                <p class="org-name">organization name</p>
+            </div>
+            <div class="pec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="discription-box">
+                    <p>our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all </p>
+                </div>
+                <p class="org-name">organization name</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming-events-container">
+        <div id="uec-heading">
+            <div>
+                <h3>Upcoming Events</h3>
+                <p>Check out the events coming up soon!</p>
+            </div>
+            <a href="events.html">View All Events</a>
+        </div>
+        <div id="uec-events">
+            <div class="uec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="uec-event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="uec-discription-box">
+                    <p>dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him dex is a murderer watch out for him </p>
+                </div>
+                <p class="uec-org-name">organization name</p>
+            </div>
+            <div class="uec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="uec-event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="uec-discription-box">
+                    <p>September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W September 10, 2025, around 12:20 p.m. at 40.277528°N, 111.714028°W </p>
+                </div>
+                <p class="uec-org-name">organization name</p>
+            </div>
+            <div class="uec-boxes">
+                <img src="images/temp-event-image.png" alt="">
+                <div class="uec-event-title-box">
+                    <h3>event title</h3>
+                </div>
+                <div class="uec-discription-box">
+                    <p>down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 down one -1 </p>
+                </div>
+                <p class="uec-org-name">organization name</p>
+            </div>
+        </div>   
+    </section>
+
+    <section>
+        <div id="about-container">
+            <h3>Get Involved Today</h3>
+            <p>Join a community, attend events, and make the most of your university experience</p>
+            <a href="about.html">Learn More ➜</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-boxes">
+                <div class="footer-image-header-box">
+                    <img src="images/hub-light-icon.png" alt="">
+                    <h3>Organization and Events Hub</h3>
+                </div>
+                <p class="footer-disc">Your central hub for student organizations and campus events at Cavite State University.</p>
+            </div>
+            <div class="footer-boxes">
+                <h3>Quick Links</h3>
+                <a href="organization.html">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About Us</a>
+            </div>
+            
+            <div class="footer-boxes">
+                <h3>Contact Us</h3>
+                <p>Email: info@organization-events-hub.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Cavite State University, Indang, Cavite</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            
+            <p>&copy; 2026 Organization and Events Hub. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+<script src="scripts/script.js"></script>
 </body>
 </html>

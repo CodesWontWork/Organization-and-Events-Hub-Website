@@ -1,9 +1,10 @@
 body {
-    background-color: var(--text-black);
+    background: black;
 }
 
 .home-image-container {
-    background-color: rgba(42, 255, 120, 0.637);
+    background: url(../images/temp-bg.png) no-repeat center center;
+    background-size: cover;
     width: 100%;
     height: 500px;
     align-items: center;
@@ -13,7 +14,7 @@ body {
 }
 
 .image-text-container {
-    margin: 10%;
+    margin: 15%;
     width: 100%;
     height: 90%;
     justify-content: center;
@@ -22,12 +23,13 @@ body {
 }
 
 .image-text-container h1{
-    color: var(--text-white);
+    text-shadow: 0.5px 0.5px 5px black;
+    color: white;
     font-size: 4rem;
-    margin-bottom: 20px;
 }
 .image-text-container p{
-    color: var(--text-white-light);
+    text-shadow: 0.5px 0.5px 5px black;
+    color: white;
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: normal;
@@ -41,17 +43,215 @@ body {
 
 #image-nav a {
     text-decoration: none;
-    color: var(--text-white);
-    font-size: 1rem;
+    color: white;
+    font-size: 1.3rem;
     margin: 20px 10px 0 0;
-    padding: 20px 30px 20px 30px;
-    border: 2px solid var(--text-white);
+    padding: 15px 25px 15px 25px;
+    border: 2px solid white;
     border-radius: 15px;
     transition: background-color 0.2s, color 0.2s ease;
-    background-color: var(--green1);
+    background-color: #54af60;
+    
 }
 
 #image-nav #a1 {
-    background-color: var(--bg-color1);
-    color: var(--green1);
+    background-color: white;
+    color: #54af60;
 }
+
+#random-ahh-container {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color1);
+    width: 100%;
+    padding: 3% 0 3% 0;
+}
+
+#random-ahh-container .rac-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-black);
+}
+
+#random-ahh-container .rac-boxes img{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+#popular-events-container, #upcoming-events-container {
+    border-top: 2px solid var(--bg-color3);
+    border-bottom: 2px solid var(--bg-color3);
+    background-color: var(--bg-color2);
+    padding: 0% 15% 4% 15%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#upcoming-events-container {
+    border-top: none;
+    border-bottom: none;
+    background-color: var(--bg-color1);
+}
+
+#pec-heading, #uec-heading {
+    color: var(--text-black);
+    font-size: 2rem;
+    padding: 50px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#pec-heading p, #uec-heading p {
+    margin: 2% 0 6% 0;
+    font-size: 1rem;
+    color: var(--text-black-light);
+}
+
+#pec-heading a, #uec-heading a {
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #54af60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#pec-events {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+#uec-events {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pec-boxes {
+    width: 350px;
+    height: 350px;
+    background-color: var(--bg-color1);
+    border-radius: 20px;
+    color: var(--text-black);
+    border: 2px solid var(--bg-color3);
+}
+
+.uec-boxes {
+    width: 462px;
+    height: 420px;
+    background-color: var(--bg-color2);
+    border-radius: 20px;
+    color: var(--text-black);
+    border: 2px solid var(--bg-color3);
+}
+
+.pec-boxes img, .uec-boxes img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid var(--bg-color3);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.pec-boxes h3 {
+    padding: 15px 20px 15px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.uec-boxes h3 {
+    padding: 15px 20px 15px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+}
+
+.discription-box {
+    padding: 0px 20px 0px 20px;
+}
+
+.uec-discription-box {
+    padding: 0px 20px 0px 20px;
+}
+
+.discription-box p {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+     overflow: hidden;
+}
+
+.uec-discription-box p {
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+     overflow: hidden;
+}
+
+.org-name {
+    padding: 15px 20px 15px 20px;
+    font-size: 0.7rem;
+}
+
+.uec-org-name {
+    padding: 15px 20px 15px 20px;
+    font-size: 1rem;
+}
+
+#about-container {
+    background-color: var(--green1);
+    padding: 3% 10% 3% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-container h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px 5px black;
+}
+
+#about-container p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 850px;
+    color: #cecece;
+    text-shadow: 0.5px 0.5px 5px rgb(48, 48, 48);
+}
+
+#about-container a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: white;
+    color: var(--green1);
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0.5px 0.5px 5px black;
+}
+
+
+

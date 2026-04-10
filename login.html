@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/auth.css">
     <title>fahhh</title>
@@ -10,7 +15,7 @@
 <body>
     <header class="header-container">
         <div class="header-title-box">
-            <img src="images/hub-icon.png" alt="" class="header-logo">
+            <img src="images/hub-light-icon.png" alt="" class="header-logo">
             <div class="header-title">
                 <h1>Organization and Events Hub</h1>
                 <p>Connecting you to the world of organizations and events</p>
@@ -24,6 +29,7 @@
                 <a href="about.html">About Us</a>
                 <a href="login.html" class="active">Log In</a>
             </nav>
+            <img src="images/moon-icon.png" alt="" class="dark-mode-toggle" onclick="toggledarkmode()">
             <img src="images/user-icon.png" alt="" class="profile-button" link="login.html">
         </div>
     </header>
@@ -36,7 +42,7 @@
     
                     <form action="">
                         
-                        <div style="display: flex; gap: 10px;">
+                        <div id="name-field">
                             <div class="field">
                             <label for="firstname">First Name:</label>
                                 <input type="text" id="firstname" name="firstname" placeholder="Juan">
@@ -60,7 +66,7 @@
                         </div>
 
                         <div class="options">
-                            <input type="submit" value="Sign In">
+                            <input type="submit" value="Sign Up">
                         </div>
                     </form>
                     <p> Already have an account?
@@ -93,6 +99,37 @@
             </div>  
         </div>
     </div>
-<script src="scripts/auth.js"></script>
+    
+    <footer>
+        <div class="footer-top">
+            <div class="footer-boxes">
+                <div class="footer-image-header-box">
+                    <img src="images/hub-light-icon.png" alt="">
+                    <h3>Organization and Events Hub</h3>
+                </div>
+                <p class="footer-disc">Your central hub for student organizations and campus events at Cavite State University.</p>
+            </div>
+            <div class="footer-boxes">
+                <h3>Quick Links</h3>
+                <a href="organization.html">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About Us</a>
+            </div>
+            
+            <div class="footer-boxes">
+                <h3>Contact Us</h3>
+                <p>Email: info@organization-events-hub.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Cavite State University, Indang, Cavite</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            
+            <p>&copy; 2026 Organization and Events Hub. All rights reserved.</p>
+        </div>
+
+    </footer>
+<script src="scripts/script.js"></script>
 </body>
 </html>

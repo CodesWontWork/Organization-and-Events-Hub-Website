@@ -1,47 +1,54 @@
 * {
     font-family: Arial, sans-serif;
+    line-height: 1.5;
     margin: 0;
+    transition: 0.4s ease;
+    box-sizing: border-box;
 }
 
-.html {
-    font-size: 10px;
+html {
+    font-size: 16px;
 }
 
 :root {
     --bg-color1: #ffffff;
-    --bg-color2: #f2f2f2;
+    --bg-color2: #f6f6f6;
+    --bg-color3: #efefef;
     --text-black: #000000;
-    --text-black-light: #1a1a1a;
+    --text-black-light: #737373;
     --text-white: #ffffff;
-    --text-white-light: #f4f4f4;
+    --text-white-light: #cecece;
     --input-border: #cccccc;
-    --green1: #1e7c2b;
+    --green1: #299f39;
+    --green2: #00a015;
 }
 
 .darkmode {
-    --bg-color1: #000000;
-    --bg-color2: #333333;
+    --bg-color1: #0d2647;
+    --bg-color2: #1d3352;
+    --bg-color3: #2d4767;
     --text-black: #ffffff;
-    --text-black-light: #f4f4f4;
+    --text-black-light: #dedede;
     --text-white: #000000;
     --text-white-light: #1a1a1a;
-    --input-border: #666666;
-    --green1: #1e7c2b;
+    --input-border: #00122a;
+    --green1: #0a6114;
+    --green2: #003f08;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8% 10% 0.8% 10%;
+    padding: 0.5% 15%;
     background-color: var(--bg-color1);
 }
 
 .header-logo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
-    background-color: var(--green1);
+    background-color: #54af60;
     padding: 5px;
     border-radius: 15px;
 }
@@ -53,44 +60,139 @@
 
 .header-title h1 {
     color: var(--text-black);
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .header-title  p {
     color: var(--text-black-light);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .navigation-container {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
 }
 
 .navigation {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .navigation a {
     text-decoration: none;
     color: var(--text-black);
-    font-size: 1rem;
-    padding: 15px;
+    font-size: 0.9rem;
+    padding: 8px 10px;
     border-radius: 10px;
     transition: background-color 0.2s, color 0.2s ease;
 }
 
 .navigation a:hover,nav a.active {
-    background-color: var(--green1);
-    color: var(--text-white);
+    background: color-mix(in srgb, var(--green1) 10%, transparent);
+    color: var(--green1);
 }
 
-
-.profile-button {
-    width: 50px;
-    height: 50px;
+.dark-mode-toggle {
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    background-color: var(--green1);
     padding: 5px;
     border-radius: 100%;
+    background-color: var(--bg-color2);
+    transition: filter 0.2s, color 0.2s, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(110%);
+    filter: invert(1);
+
+}
+
+.darkmode .dark-mode-toggle:hover {
+    filter: invert(1) brightness(2);
+
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #54af60;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+footer {
+    background-color: #041225;
+}
+
+.footer-top {
+    background-color: #041225;
+    padding: 20px 15%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0%;
+}
+
+.footer-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 30%;
+    width: 30%;
+}
+
+.footer-boxes h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-boxes a {
+    text-decoration: none;
+    color: #b5b5b5;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.footer-boxes p {
+    color: #b5b5b5;
+    font-size: 0.8rem;
+}
+
+.footer-image-header-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.footer-image-header-box img {
+    margin-right: -10px;
+    width: 50px;
+    height: 50px;
+    background-color: #54af60;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.footer-disc {
+    color: #b5b5b5;
+    font-size: 1rem;
+    max-width: 400px;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #b5b5b5;
+    background-color: #041225;
+    margin: 0 15%;
+}
+
+.footer-bottom {
+    background-color: #041225;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: center;
+    color: #b5b5b5;
 }
