@@ -68,6 +68,7 @@ input[type=email] {
     border-radius: 4px;
     box-sizing: border-box;
     background-color: var(--bg-color1);
+    color: var(--text-black);
 }
 
 input[type=text]:focus,
