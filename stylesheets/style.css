@@ -36,6 +36,19 @@ html {
     --green2: #003f08;
 }
 
+.icon {
+    filter: invert(90%);
+}
+
+.darkmode .icon{
+    filter: invert(0%);
+}
+
+.header-container button{
+    background-color: transparent;
+    border-style: none;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -98,7 +111,7 @@ html {
     cursor: pointer;
     padding: 5px;
     border-radius: 100%;
-    background-color: var(--bg-color2);
+    /* background-color: var(--bg-color2); */
     transition: filter 0.2s, color 0.2s, transform 0.2s ease;
 }
 
@@ -110,7 +123,6 @@ html {
 
 .darkmode .dark-mode-toggle:hover {
     filter: invert(1) brightness(2);
-
 }
 
 .profile-button {

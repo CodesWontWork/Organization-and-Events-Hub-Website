@@ -29,10 +29,10 @@ function toggledarkmode() {
     root.classList.toggle("darkmode");
 
     if (root.classList.contains("darkmode")) {
-        if (icon) icon.src = "images/sun-icon.png";
+        if (icon) icon.src = "images/sun.svg";
         localStorage.setItem("theme", "dark");
     } else {
-        if (icon) icon.src = "images/moon-icon.png";
+        if (icon) icon.src = "images/moon.svg";
         localStorage.setItem("theme", "light");
     }
 
