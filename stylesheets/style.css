@@ -37,14 +37,15 @@ html {
 }
 
 .icon {
-    filter: invert(90%);
+    filter: invert(100%);
 }
 
 .darkmode .icon{
-    filter: invert(0%);
+    filter: invert(10%);
 }
 
 .header-container button{
+    display: flex;
     background-color: transparent;
     border-style: none;
 }
@@ -129,7 +130,7 @@ html {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-color: #54af60;
+    /* background-color: #54af60; */
     padding: 5px;
     border-radius: 100%;
 }

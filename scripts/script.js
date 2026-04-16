@@ -44,10 +44,10 @@ window.onload = function () {
 
     if (savedTheme === "dark") {
         document.documentElement.classList.add("darkmode");
-        if (icon) icon.src = "images/sun-icon.png";
+        if (icon) icon.src = "images/sun.svg";
     } else {
         document.documentElement.classList.remove("darkmode");
-        if (icon) icon.src = "images/moon-icon.png";
+        if (icon) icon.src = "images/moon.svg";
     }
 };
 
