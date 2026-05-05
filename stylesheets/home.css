@@ -43,20 +43,20 @@ body {
 
 #image-nav a {
     text-decoration: none;
-    color: white;
+    color: #faf8f5;
     font-size: 1.3rem;
     margin: 20px 10px 0 0;
     padding: 15px 25px 15px 25px;
-    border: 2px solid white;
+    border: 2px solid #faf8f5;
     border-radius: 15px;
     transition: background-color 0.2s, color 0.2s ease;
-    background-color: #54af60;
+    background-color: #264224;
     
 }
 
 #image-nav #a1 {
-    background-color: white;
-    color: #54af60;
+    background-color: #faf8f5;
+    color: #264224;
 }
 
 #random-ahh-container {
@@ -121,8 +121,8 @@ body {
 #pec-heading a, #uec-heading a {
     text-decoration: none;
     font-size: 1rem;
-    background-color: #54af60;
-    color: white;
+    background-color: #264224;
+    color: #faf8f5;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.2s ease;
@@ -229,7 +229,7 @@ body {
 #about-container h3 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #faf8f5;
     text-shadow: 0.5px 0.5px 5px black;
 }
 
@@ -238,7 +238,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
     max-width: 850px;
-    color: #cecece;
+    color: #f1f1f1;
     text-shadow: 0.5px 0.5px 5px rgb(48, 48, 48);
 }
 

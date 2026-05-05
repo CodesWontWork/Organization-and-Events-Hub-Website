@@ -11,29 +11,29 @@ html {
 }
 
 :root {
-    --bg-color1: #ffffff;
-    --bg-color2: #f6f6f6;
-    --bg-color3: #efefef;
-    --text-black: #000000;
-    --text-black-light: #737373;
-    --text-white: #ffffff;
+    --bg-color1: #faf8f5;
+    --bg-color2: #eeeae5;
+    --bg-color3: #ece6df;
+    --text-black: #111111;
+    --text-black-light: #3f3f3f;
+    --text-white: #faf8f5;
     --text-white-light: #cecece;
-    --input-border: #cccccc;
-    --green1: #299f39;
-    --green2: #00a015;
+    --input-border: #f1f1f1;
+    --green1: #264224;
+    --green2: #1a3d18;
 }
 
 .darkmode {
-    --bg-color1: #0d2647;
-    --bg-color2: #1d3352;
+    --bg-color1: #152944;
+    --bg-color2: #1b3252;
     --bg-color3: #2d4767;
-    --text-black: #ffffff;
+    --text-black: #faf8f5;
     --text-black-light: #dedede;
-    --text-white: #000000;
+    --text-white: #111111;
     --text-white-light: #1a1a1a;
     --input-border: #00122a;
-    --green1: #0a6114;
-    --green2: #003f08;
+    --green1: #264224;
+    --green2: #507914;
 }
 
 .header-container {
@@ -48,7 +48,7 @@ html {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-    background-color: #54af60;
+    background-color: var(--green1);
     padding: 5px;
     border-radius: 15px;
 }
@@ -117,17 +117,17 @@ html {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-color: #54af60;
+    background-color: var(--green1);
     padding: 5px;
     border-radius: 100%;
 }
 
 footer {
-    background-color: #041225;
+    background-color: var(--bg-color1);
 }
 
 .footer-top {
-    background-color: #041225;
+    background-color: var(--bg-color1);
     padding: 20px 15%;
     display: flex;
     justify-content: space-between;
@@ -143,20 +143,20 @@ footer {
 }
 
 .footer-boxes h3 {
-    color: white;
+    color: var(--text-black);
     font-size: 1.5rem;
 }
 
 .footer-boxes a {
     text-decoration: none;
-    color: #b5b5b5;
+    color: var(--text-black-light);
     font-size: 1rem;
     transition: color 0.2s ease;
     line-height: 1;
 }
 
 .footer-boxes p {
-    color: #b5b5b5;
+    color: var(--text-black-light);
     font-size: 0.8rem;
 }
 

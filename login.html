@@ -37,43 +37,56 @@
         <div class="container">
             
             <div class="signUp" id="signUp">
-                <div >
-                    <h1>Sign Up</h1>
-    
-                    <form action="">
-                        
-                        <div id="name-field">
-                            <div class="field">
-                            <label for="firstname">First Name:</label>
-                                <input type="text" id="firstname" name="firstname" placeholder="Charlie">
-                            </div>
-                            <div class="field">
-                            <label for="lastname">Last Name:</label>
-                                <input type="text" id="lastname" name="lastname" placeholder="Kirk">
-                            </div>
-                        </div>  
-                        <div class="field">
-                            <label for="email">Email:</label>
-                            <input type="email" class="inputs" name="email" placeholder="example@cvsu.edu.ph">
-                        </div>
-                        <div class="field">
-                            <label for="password">Create Your Password:</label>
-                            <input type="password" class="inputs" name="password" placeholder="A Strong Password">
-                        </div>
-                        <div class="field">
-                            <label for="password">Confirm Your Password:</label>
-                            <input type="password" class="inputs" name="confirm_password" placeholder="Re-enter your password">
-                        </div>
+            <div>
+                <h1>Sign Up</h1>
 
-                        <div class="options">
-                            <input type="submit" value="Sign Up">
+                <form action="">
+                    
+                    <div id="name-field">
+                        <div class="field">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Juan Carlo">
                         </div>
-                    </form>
-                    <p> Already have an account?
-                        <button type="button" onclick="showLogin()">Log In</button>
-                    </p>
-                </div>
+                        <div class="field">
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Dela Cruz">
+                        </div>
+                    </div>  
+
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input type="email" class="inputs" name="email" placeholder="example-email@gmail.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Create Your Password:</label>
+                        <input type="password" class="inputs" name="password" placeholder="A Strong Password">
+                    </div>
+
+                    <div class="field">
+                        <label for="confirm_password">Confirm Your Password:</label>
+                        <input type="password" class="inputs" name="confirm_password" placeholder="Re-enter your password">
+                    </div>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        <p>
+                        I agree to the 
+                        <a href="#" onclick="openTerms(event)">Terms and Conditions</a>
+                        </p>
+                    </label>
+
+                    <div class="options">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                </form>
+
+                <p class="switch"> Already have an account?
+                    <button type="button" onclick="showLogin()">Log In</button>
+                </p>
             </div>
+        </div>
             <div class="logIn active" id="logIn">
                 
                     <h1>Log In</h1>
@@ -93,10 +106,71 @@
                             <input type="submit" value="Sign In">
                         </div>
                     </form>
-                    <p>Need an account?
+                    <p class="switch">Need an account?
                         <button type="button" onclick="showSignUp()">Sign Up</button>
                     </p>
             </div>  
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTerms()">&times;</span>
+            <h2>Terms and Conditions</h2>
+
+            <div class="terms-text">
+                <br>
+                <p><strong>1. Acceptance of Terms</strong><br>
+                By accessing and using this website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use the platform.</p>
+                <br>
+                <p><strong>2. Description of Service</strong><br>
+                This website is a Organizations and Events Hub that allows users to:
+                <br>
+                <ul>
+                    <li>Create accounts and log in</li>
+                    <li>Post, view, and manage events</li>
+                    <li>Interact with organization-related content</li>
+                </ul>
+                </p>
+                <br>
+                <p><strong>3. User Accounts</strong><br>
+                Users are responsible for maintaining the confidentiality of their login credentials.
+                You agree to provide accurate and complete information during registration.
+                The platform reserves the right to suspend or terminate accounts that violate these terms.</p>
+                <br>
+                <p><strong>4. User Content</strong><br>
+                Users may post event details and related content.
+                You are responsible for the content you upload.
+                Content must not be false, misleading, offensive, or violate any laws or school policies.
+                The platform reserves the right to remove any content deemed inappropriate.</p>
+                <br>
+                <p><strong>5. Acceptable Use</strong><br>
+                You agree not to:
+                <br>
+                Use the platform for illegal activities.
+                Post harmful, abusive, or inappropriate content.
+                Attempt to hack, disrupt, or damage the system.
+                Impersonate other individuals or organizations.</p>
+                <br>
+                <p><strong>6. Intellectual Property</strong><br>
+                All content, design, and features of the website are owned by the developers unless otherwise stated. Users retain ownership of their posted content but grant the platform permission to display it.</p>
+                <br>
+                <p><strong>7. Privacy</strong><br>
+                Basic user information such as name and email may be collected for account functionality. Your data will not be sold but may be used to improve the platform.</p>
+                <br>
+                <p><strong>8. Limitation of Liability</strong><br>
+                The platform is provided "as is." The developers are not responsible for:
+                <br>
+                Inaccurate event information posted by users.
+                Any damages resulting from the use of the platform.
+                Temporary unavailability of the website.</p>
+                <br>
+                <p><strong>9. Modifications</strong><br>
+                These Terms and Conditions may be updated at any time. Continued use of the platform means you accept the updated terms.</p>
+                <br>
+                <p><strong>10. Contact</strong><br>
+                For questions or concerns, please contact the website administrators.</p>
+            </div>
         </div>
     </div>
     

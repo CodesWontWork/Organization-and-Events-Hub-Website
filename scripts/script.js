@@ -68,3 +68,20 @@ function picktagmany(element) {
     element.classList.toggle("tags-pick-many-active");
     element.classList.toggle("tags-pick-many");
 }
+
+function openTerms(event) {
+    event.preventDefault();
+    document.getElementById("termsModal").style.display = "block";
+}
+
+function closeTerms() {
+    document.getElementById("termsModal").style.display = "none";
+}
+
+// Close if clicked outside the box
+window.onclick = function(event) {
+    const modal = document.getElementById("termsModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}

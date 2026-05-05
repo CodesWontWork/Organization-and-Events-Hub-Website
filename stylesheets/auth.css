@@ -31,7 +31,7 @@
     background-color: var(--bg-color2);
     padding: 20px;
     height: max-content;
-    width: 20vw;
+    width: 100%;
     min-width: 300px;
     display: none; /* hidden by default */
 }
@@ -103,7 +103,7 @@ input::placeholder {
 }
 
 .showpass #ShowPassButton {
-    background-color: #54af60;
+    background-color: #264224;
 }
 
 /* =========================
@@ -114,18 +114,85 @@ button {
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
+    margin: 0 10px;
     cursor: pointer;
-    background-color: #54af60;
-    color: white;
+    background-color: #264224;
+    color: #faf8f5;
 }
 
 input[type=submit] {
     width: 100%;
-    background-color: #54af60;
-    color: white;
+    background-color: #264224;
+    color: #faf8f5;
     padding: 14px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.custom-checkbox {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.custom-checkbox p {
+    color: var(--text-black);
+}
+
+.custom-checkbox a {
+    
+    color: #264224;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: var(--bg-color2);
+    color: var(--text-black);
+    margin: 8% auto;
+    padding: 20px;
+    width: 50vw;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.terms-text {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 20px;
+    
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }

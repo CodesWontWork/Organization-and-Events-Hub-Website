@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("darkmode");
+        }
+    </script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/about.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header-title-box">
+            <img src="images/hub-light-icon.png" alt="" class="header-logo">
+            <div class="header-title">
+                <h1>Organization and Events Hub</h1>
+                <p>Connecting you to the world of organizations and events</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="organizations.html">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="login.html">Log In</a>
+            </nav>
+            <img src="images/moon-icon.png" alt="" class="dark-mode-toggle" onclick="toggledarkmode()">
+            <img src="images/user-icon.png" alt="" class="profile-button" link="login.html">
+        </div>
+    </header>
+
+    <section id="sec1">
+        <h1>About Us</h1>
+        <p>Welcome to the Organization and Events Hub, your central platform for discovering and engaging with student organizations and campus events at Cavite State University.</p>
+    </section>
+
+    <section id="sec2">
+        <div id="mission-box">
+            <h2>Our Mission</h2>
+            <p>Our mission is to foster a vibrant campus community by connecting students with a wide range of extracurricular activities, clubs, and events that enrich their university experience.</p>
+        </div>
+        <h2 id="offer-title">What We Offer</h2>
+        <div id="features-container">
+            <div class="feature-box">
+                <img src="" alt="">
+                <h3>Student Organizations</h3>
+                <p>Discover and join a variety of student organizations that align with your interests and passions.</p>
+            </div>
+            <div class="feature-box">
+                <img src="" alt="">
+                <h3>Campus Events</h3>
+                <p>Stay updated on the latest campus events and activities happening at Cavite State University.</p>
+            </div>
+            <div class="feature-box">
+                <img src="" alt="">
+                <h3>Campus Events</h3>
+                <p>Stay updated on the latest campus events and activities happening at Cavite State University.</p>
+            </div>
+        </div>
+
+        <div id="get-box">
+            <h2>Get Involved</h2>
+            <p>Join our community and start exploring the diverse opportunities available to you at Cavite State University. </p>
+            <div id="linkbox">
+                <a href="organizations.html">Explore Organizations & Events</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-boxes">
+                <div class="footer-image-header-box">
+                    <img src="images/hub-light-icon.png" alt="">
+                    <h3>Organization and Events Hub</h3>
+                </div>
+                <p class="footer-disc">Your central hub for student organizations and campus events at Cavite State University.</p>
+            </div>
+            <div class="footer-boxes">
+                <h3>Quick Links</h3>
+                <a href="organizations.html">Organizations</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About Us</a>
+            </div>
+            
+            <div class="footer-boxes">
+                <h3>Contact Us</h3>
+                <p>Email: info@organization-events-hub.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: Cavite State University, Indang, Cavite</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            
+            <p>&copy; 2026 Organization and Events Hub. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
