@@ -24,9 +24,9 @@ html {
 }
 
 .darkmode {
-    --bg-color1: #152944;
-    --bg-color2: #1b3252;
-    --bg-color3: #2d4767;
+    --bg-color1: #1b1b1b;
+    --bg-color2: #252525;
+    --bg-color3: #1f1f1f;
     --text-black: #faf8f5;
     --text-black-light: #dedede;
     --text-white: #111111;
@@ -171,7 +171,7 @@ footer {
     margin-right: -10px;
     width: 50px;
     height: 50px;
-    background-color: #54af60;
+    background-color: #264224;
     padding: 5px;
     border-radius: 15px;
 }
