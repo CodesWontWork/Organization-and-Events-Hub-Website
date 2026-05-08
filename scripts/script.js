@@ -29,10 +29,10 @@ function toggledarkmode() {
     root.classList.toggle("darkmode");
 
     if (root.classList.contains("darkmode")) {
-        if (icon) icon.src = "images/sun-icon.png";
+        if (icon) icon.src = "/images/sun-icon.png";
         localStorage.setItem("theme", "dark");
     } else {
-        if (icon) icon.src = "images/moon-icon.png";
+        if (icon) icon.src = "/images/moon-icon.png";
         localStorage.setItem("theme", "light");
     }
 
@@ -44,10 +44,10 @@ window.onload = function () {
 
     if (savedTheme === "dark") {
         document.documentElement.classList.add("darkmode");
-        if (icon) icon.src = "images/sun-icon.png";
+        if (icon) icon.src = "/images/sun-icon.png";
     } else {
         document.documentElement.classList.remove("darkmode");
-        if (icon) icon.src = "images/moon-icon.png";
+        if (icon) icon.src = "/images/moon-icon.png";
     }
 };
 
