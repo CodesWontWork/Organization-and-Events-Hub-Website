@@ -156,6 +156,7 @@ input[type="search"]:focus {
 .org-event-info-container .org-event-disc{
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     color: var(--text-black-light);
