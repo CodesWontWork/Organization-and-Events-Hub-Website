@@ -19,7 +19,7 @@
             <img src="images/hub-light-icon.png" alt="" class="header-logo">
             <div class="header-title">
                 <h1>Organization and Events Hub</h1>
-                <p>Connecting you to the world of organizations and events</p>
+                <p>Connect to your heart's desire</p>
             </div>
         </div>
         <div class="navigation-container">
@@ -39,27 +39,59 @@
             <h1>Welcome to "Website Name"</h1> 
             <p>Your one-stop destination for all organizational needs</p>
             <div id="image-nav">
-                <a href="organizations.html" id="a1">Browse Organizations 🔍︎</a>
-                <a href="events.html">View Events 🗓</a>
+                <a href="discover.html" id="a1"> Discover more 🔍︎</a>
             </div>
         </div>`
     </section>
 
     <section id="random-ahh-container">
             <div class="rac-boxes">
-                <img src="images/randomahh-icon.png" alt="">
-                <h3>1</h3>
-                <p>random ahh text</p>
+                <img class="icon" src="images/event_icon.svg" alt="">
+                <div>
+                    <h3 id="event_counter">0</h3>
+                    <p>Upcoming Events</p>
+                    <script>
+                        async function loadCounter() {
+                            const response = await fetch("http://127.0.0.1:8000/api/events");
+                            const data = await response.json();
+
+                            document.getElementById("event_counter").textContent = data.length;
+                        }
+                    loadCounter();
+                    </script>
+                </div>    
             </div>
             <div class="rac-boxes">
-                <img src="images/randomahh-icon.png" alt="">
-                <h3>2</h3>
-                <p>random ahh text</p>
+                <img class="icon" src="images/organization-icon.svg" alt="">
+                <div>
+                    <h3 id="org_counter">0</h3>
+                    <p>Organizations</p>
+                    <script>
+                        async function loadCounter() {
+                            const response = await fetch("http://127.0.0.1:8000/api/organizations");
+                            const data = await response.json();
+
+                            document.getElementById("org_counter").textContent = data.length;
+                        }
+                    loadCounter();
+                    </script>
+                </div>
             </div>
             <div class="rac-boxes">
-                <img src="images/randomahh-icon.png" alt="">
-                <h3>3</h3>
-                <p>random ahh text</p>
+                <img class="icon" src="images/profile-icon.svg" alt="">
+                <div>
+                    <h3 id="user_counter">0</h3>
+                    <p>Users</p>
+                    <script>
+                        async function loadCounter() {
+                            const response = await fetch("http://127.0.0.1:8000/api/users");
+                            const data = await response.json();
+
+                            document.getElementById("user_counter").textContent = data.length;
+                        }
+                    loadCounter();
+                    </script>
+                </div>    
             </div>
     </section>
 

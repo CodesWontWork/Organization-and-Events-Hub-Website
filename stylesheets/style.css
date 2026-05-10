@@ -40,7 +40,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5% 15%;
+    padding: 0.5% 5vw;
     background-color: var(--bg-color1);
 }
 
@@ -50,7 +50,7 @@ html {
     margin-right: 10px;
     background-color: var(--green1);
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .header-title-box {
@@ -173,7 +173,7 @@ footer {
     height: 50px;
     background-color: #264224;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .footer-disc {
@@ -195,4 +195,43 @@ footer hr {
     display: flex;
     justify-content: center;
     color: #b5b5b5;
+}
+
+
+@media (max-width: 900px) {
+    * {
+        /* background-color: rgba(90, 218, 103, 0.201); */
+    }
+
+    .header-container {
+        padding: 0.5% 2vw;
+    }
+
+    .header-title p{
+        display: none;
+    }
+}
+
+@media (max-width: 725px){
+    * {
+        /* background-color: rgba(218, 90, 90, 0.201); */
+    }
+
+    .header-container {
+        padding: 0.5% 10px;
+    }
+
+    .header-title{
+        display: none;
+    }
+
+    .header-logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navigation a {
+        font-weight: 600;
+    }
+
 }
