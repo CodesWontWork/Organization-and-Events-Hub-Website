@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="16"
-   height="16"
-   viewBox="0 0 16 16"
+   width="13.497066"
+   height="13.497066"
+   viewBox="0 0 13.497066 13.497066"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      inkscape:zoom="21.53125"
-     inkscape:cx="-2.0899855"
-     inkscape:cy="5.6661829"
+     inkscape:cx="5.0624093"
+     inkscape:cy="1.6255443"
      inkscape:window-width="1570"
      inkscape:window-height="825"
      inkscape:window-x="0"
@@ -145,71 +145,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       d="m 0,16 v -4 h -2.0429688 v 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path19" />
-    <path
-       d="M 0,12 V 8 h -2.0429688 v 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path18" />
-    <path
-       d="M 0,8 V 4 h -2.0429688 v 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path17" />
-    <path
-       d="M -2.0429688,4 H 0 V 0 h -2.0429688 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path16" />
-    <path
-       d="M 8,16 H 4 v 2.042969 h 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path21" />
-    <path
-       d="M 4,18.042969 V 16 H 0 v 2.042969 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path20" />
-    <path
-       d="m 16,16 h -4 v 2.042969 h 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path23" />
-    <path
-       d="M 12,16 H 8 v 2.042969 h 4 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path22" />
-    <path
-       d="M 8,-2.0429688 V 0 h 4 v -2.0429688 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path29" />
-    <path
-       d="M 12,-2.0429688 V 0 h 4 v -2.0429688 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path28" />
-    <path
-       d="M 0,-2.0429688 V 0 h 4 v -2.0429688 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path31" />
-    <path
-       d="M 4,-2.0429688 V 0 h 4 v -2.0429688 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path30" />
-    <path
-       d="m 16,8 v 4 h 2.042969 V 8 Z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path25" />
-    <path
-       d="M 18.042969,12 H 16 v 4 h 2.042969 z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path24" />
-    <path
-       d="m 16,0 v 4 h 2.042969 V 0 Z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path27" />
-    <path
-       d="m 16,4 v 4 h 2.042969 V 4 Z"
-       style="fill:#808080;fill-opacity:0.5;stroke-linecap:square;paint-order:fill markers stroke"
-       id="path26" />
+     id="layer1"
+     transform="translate(-1.2514673,-1.2514673)">
     <circle
        style="fill:none;fill-opacity:0.5;stroke:#ffffff;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path32"

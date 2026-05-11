@@ -1,0 +1,19 @@
+@import "filename.css";
+
+body {
+    background-color: blanchedalmond;
+}
+
+img{
+    border-radius: 1vh;
+}
+
+.background-image{
+    height: auto;
+    width: 100%;
+}
+
+.profile-image{
+    border-radius: 50%;
+}
+

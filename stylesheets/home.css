@@ -61,24 +61,27 @@ body {
 
 #random-ahh-container {
     display: flex;
-    gap: 10%;
+    gap: 10px;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     background-color: var(--bg-color1);
     width: 100%;
     padding: 3%;
 }
 
+
+
 #random-ahh-container .rac-boxes {
     background-color: var(--bg-color2);
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
     color: var(--text-black);
-    padding: 10px;
-    border-radius: 50vh;
-    gap: 10px;
+    padding: 2vw;
+    border-radius: 10px;
+    gap: 15px;
 }
 
 #random-ahh-container .rac-boxes img{
@@ -93,7 +96,7 @@ body {
 
 
 
-#popular-events-container, #upcoming-events-container {
+#popular-events-container, #upcoming-events-container, #org-container {
     border-top: 2px solid var(--bg-color3);
     border-bottom: 2px solid var(--bg-color3);
     background-color: var(--bg-color2);
@@ -287,22 +290,24 @@ body {
 }
 
 
-@media (max-width: 600px){
-    
+@media (max-width: 775px){
+    #random-ahh-container{
+        justify-content: space-evenly;
+    }
     
     #random-ahh-container .rac-boxes {
-        flex-direction: column;
-        gap: 0;
+        flex-grow: unset;
+        width: max-content;
         position: relative;
     }
     .rac-boxes p{
-        display: none;
+        /* display: none; */
     }
     #random-ahh-container .rac-boxes h3{
-        color: black;
-        font-weight: 900;
+        /* color: black; */
     }
     .rac-boxes div{
+        color: black;
         position: absolute;
         width: max-content;
         text-align: center;
