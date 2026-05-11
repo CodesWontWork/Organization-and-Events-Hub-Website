@@ -40,7 +40,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5% 5vw;
+    padding: 0.5% 15%;
     background-color: var(--bg-color1);
 }
 
@@ -190,7 +190,7 @@ footer hr {
 }
 
 .footer-bottom {
-    background-color: #041225;
+    background-color: #1b1b1b;
     padding: 20px 10%;
     display: flex;
     justify-content: center;
