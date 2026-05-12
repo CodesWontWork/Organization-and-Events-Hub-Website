@@ -85,3 +85,223 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// ==========================
+// GLOBAL STATE
+// ==========================
+
+let organizations = [];
+let tags = [];
+
+let selectedTags = [];
+let searchText = "";
+
+// ==========================
+// FETCH DATA
+// ==========================
+
+async function loadData() {
+
+    try {
+
+        const [orgResponse, tagResponse] = await Promise.all([
+            fetch("http://127.0.0.1:8000/api/organizations"),
+            fetch("http://127.0.0.1:8000/api/tags")
+        ]);
+
+        organizations = await orgResponse.json();
+        tags = await tagResponse.json();
+
+        renderTags();
+        renderCards();
+
+    } catch (err) {
+
+        console.error("Failed to load data:", err);
+
+    }
+}
+
+// ==========================
+// SEARCH
+// ==========================
+
+const searchInput = document.querySelector(".search-box input");
+
+searchInput.addEventListener("input", (e) => {
+
+    searchText = e.target.value.toLowerCase();
+
+    renderCards();
+
+});
+
+// ==========================
+// TAGS
+// ==========================
+
+function renderTags() {
+
+    const tagsContainer = document.querySelector(".tags-boxes");
+
+    tagsContainer.innerHTML = "";
+
+    tags.forEach(tag => {
+
+        const tagElement = document.createElement("p");
+
+        tagElement.className = "tags-pick-many";
+
+        // support both string tags and object tags
+        const tagName = typeof tag === "string"
+            ? tag
+            : tag.name;
+
+        tagElement.innerText = tagName;
+
+        tagElement.onclick = () => picktagmany(tagElement);
+
+        tagsContainer.appendChild(tagElement);
+
+    });
+}
+
+function picktagmany(element) {
+
+    const tag = element.innerText;
+
+    if (selectedTags.includes(tag)) {
+
+        selectedTags = selectedTags.filter(t => t !== tag);
+
+        element.classList.remove("tags-pick-many-active");
+
+    } else {
+
+        selectedTags.push(tag);
+
+        element.classList.add("tags-pick-many-active");
+
+    }
+
+    renderCards();
+}
+
+// ==========================
+// FILTERING
+// ==========================
+function filterOrganization(org) {
+
+    const matchesSearch =
+
+        org.name?.toLowerCase().includes(searchText) ||
+        org.description?.toLowerCase().includes(searchText) ||
+        org.abbreviation?.toLowerCase().includes(searchText);
+
+    const matchesTags =
+
+        selectedTags.length === 0 ||
+
+        selectedTags.every(selectedTag =>
+
+            (org.tags || []).some(orgTag => {
+
+                const orgTagName =
+                    typeof orgTag === "string"
+                        ? orgTag
+                        : orgTag.name;
+
+                return orgTagName === selectedTag;
+
+            })
+
+        );
+
+    return matchesSearch && matchesTags;
+}
+// ==========================
+// RENDER CARDS
+// ==========================
+
+function renderCards() {
+
+    const container = document.querySelector(".org-event-cards-container");
+
+    container.innerHTML = "";
+
+    const filtered = organizations.filter(filterOrganization);
+
+    if (filtered.length === 0) {
+
+        container.innerHTML = `
+            <p class="no-results">
+                No organizations found.
+            </p>
+        `;
+
+        return;
+    }
+
+    filtered.forEach(org => {
+
+        const card = document.createElement("div");
+
+        card.className = "cards-container";
+
+        card.innerHTML = `
+            <div class="org-event-info-container">
+            
+                <img
+                    class="background"
+                    src="${org.bgp || "images/temp-org-image.png"}"
+                    alt=""
+                >
+                <div>
+                    <div class="hero">
+                        <img
+                        class="profile"
+                        src="${org.pfp || "images/temp-org-image.png"}"
+                        alt=""
+                        >
+                        
+                        <h2 class="org-name">
+                            ${org.name || "Unknown"}
+                        </h2>
+                    </div>
+                    <p class="org-disc">
+                        ${org.description || ""}
+                    </p>
+                </div>
+                
+
+                <div class="org-event-tags-container">
+
+                    ${
+                        (org.tags || [])
+                            .map(tag => `
+                                <p class="org-event-tags">
+                                    ${tag.name}
+                                </p>
+                            `)
+                            .join("")
+                    }
+                </div>
+            </div>
+        `;
+
+        card.addEventListener("click", () => {
+
+            window.location.href = `/organization/${org.id}`;
+
+        });
+
+        container.appendChild(card);
+
+    });
+}
+
+// ==========================
+// START
+// ==========================
+
+loadData();

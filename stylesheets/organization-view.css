@@ -1,19 +1,41 @@
-@import "filename.css";
+@import "style.css";
 
-body {
-    background-color: blanchedalmond;
+.organization-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color2);
+    height: 100vh;
+
 }
 
-img{
-    border-radius: 1vh;
+.background-container{
+    /* background-color: aqua; */
+    width: 80%;
 }
 
 .background-image{
-    height: auto;
     width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    /* margin-right: auto; */
+    
+}
+
+.name{
+    font-size: 1.5rem;
 }
 
 .profile-image{
+    width: 100px;
     border-radius: 50%;
 }
 
