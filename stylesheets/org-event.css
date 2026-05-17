@@ -137,7 +137,7 @@ input[type="search"]:focus {
     border: 2px solid var(--bg-color3);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    max-width: 30%;
 }
 
 .cards-container .background {
@@ -161,6 +161,7 @@ input[type="search"]:focus {
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    
 }
 
 .org-event-info-container .org-event-desc{
