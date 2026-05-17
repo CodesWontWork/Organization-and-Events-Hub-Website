@@ -54,8 +54,8 @@ label {
     justify-content: space-between;
 }
 
-#name-field .field {
-    width: 48%;
+.field{
+    width: 100%;
 }
 
 input[type=text],

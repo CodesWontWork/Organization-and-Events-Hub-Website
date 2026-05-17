@@ -105,8 +105,8 @@ async function loadData() {
     try {
 
         const [orgResponse, tagResponse] = await Promise.all([
-            fetch("http://127.0.0.1:8000/api/organizations"),
-            fetch("http://127.0.0.1:8000/api/tags")
+            fetch("/api/organizations"),
+            fetch("/api/tags")
         ]);
 
         organizations = await orgResponse.json();
@@ -305,3 +305,30 @@ function renderCards() {
 // ==========================
 
 loadData();
+
+async function getCurrentUser() {
+    try {
+        const res = await fetch("/me");
+
+        if (!res.ok) {
+            return null;
+        }
+
+        return await res.json();
+
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const user = await getCurrentUser();
+
+    if (!user) {
+        window.location.href = "/login.html";
+    }
+
+});
+

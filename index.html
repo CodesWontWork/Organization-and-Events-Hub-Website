@@ -27,10 +27,12 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="discover.html">Discover</a>
                 <a href="about.html">About Us</a>
-                <a href="login.html">Log In</a>
+                <a href="login.html" id="login-link">Log In</a>
             </nav>
             <img src="images/moon-icon.png" alt="" class="dark-mode-toggle" onclick="toggledarkmode()">
-            <img src="images/user-icon.png" alt="" class="profile-button" link="login.html">
+            <div class="profile-div" id="profile-div">
+                <img src="" id="profile-pic">
+            </div>
         </div>
     </header>
         
@@ -52,7 +54,7 @@
                     <p>Upcoming Events</p>
                     <script>
                         async function loadCounter() {
-                            const response = await fetch("http://127.0.0.1:8000/api/events");
+                            const response = await fetch("/api/events");
                             const data = await response.json();
 
                             document.getElementById("event_counter").textContent = data.length;
@@ -68,7 +70,7 @@
                     <p>Organizations</p>
                     <script>
                         async function loadCounter() {
-                            const response = await fetch("http://127.0.0.1:8000/api/organizations");
+                            const response = await fetch("/api/organizations");
                             const data = await response.json();
 
                             document.getElementById("org_counter").textContent = data.length;
@@ -84,7 +86,7 @@
                     <p>Users</p>
                     <script>
                         async function loadCounter() {
-                            const response = await fetch("http://127.0.0.1:8000/api/users");
+                            const response = await fetch("/api/users");
                             const data = await response.json();
 
                             document.getElementById("user_counter").textContent = data.length;
@@ -94,58 +96,6 @@
                 </div>    
             </div>
     </section>
-
-    <!-- <section id="popular-events-container">
-        <div id="pec-heading">
-            <div>
-                <h3>Popular Events</h3>
-                <p>Check out some of the most popular events in the community!</p>
-            </div>
-            <a href="events.html">View All Events</a>
-        </div>
-        <div id="pec-events">
-            <div class="pec-boxes">
-                <img src="images/temp-event-image.png" alt="">
-                <div class="event-title-box">
-                    <h3>event title</h3>
-                </div>
-                <div class="discription-box">
-                    <p>nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy nestor is a femboy</p>
-                </div>
-                <p class="org-name">organization name</p>
-            </div>
-            <div class="pec-boxes">
-                <img src="images/temp-event-image.png" alt="">
-                <div class="event-title-box">
-                    <h3>event title</h3>
-                </div>
-                <div class="discription-box">
-                    <p>plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this plz sir I need this</p>
-                </div>
-                <p class="org-name">organization name</p>
-            </div>
-            <div class="pec-boxes">
-                <img src="images/temp-event-image.png" alt="">
-                <div class="event-title-box">
-                    <h3>event title</h3>
-                </div>
-                <div class="discription-box">
-                    <p>tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash tekken is trash</p>
-                </div>
-                <p class="org-name">organization name</p>
-            </div>
-            <div class="pec-boxes">
-                <img src="images/temp-event-image.png" alt="">
-                <div class="event-title-box">
-                    <h3>event title</h3>
-                </div>
-                <div class="discription-box">
-                    <p>our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all our lord and savior lhian shall save us all </p>
-                </div>
-                <p class="org-name">organization name</p>
-            </div>
-        </div>
-    </section> -->
 
     <section id="org-container">
         <div id="uec-heading">
@@ -240,35 +190,25 @@
 
     <footer>
         <div class="footer-top">
-            <div class="footer-boxes">
-                <div class="footer-image-header-box">
-                    <img src="images/hub-light-icon.png" alt="">
-                    <h3>Organization and Events Hub</h3>
-                </div>
-                <p class="footer-disc">Your central hub for student organizations and campus events at Cavite State University.</p>
-            </div>
-            <div class="footer-boxes">
-                <h3>Quick Links</h3>
-                <a href="organizations.html">Organizations</a>
-                <a href="events.html">Events</a>
-                <a href="about.html">About Us</a>
-            </div>
             
             <div class="footer-boxes">
                 <h3>Contact Us</h3>
-                <p>Email: info@organization-events-hub.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Address: Cavite State University, Indang, Cavite</p>
+                <div>
+                    <p>Email:<br>info@organization-events-hub.com</p>
+                    <p>Phone:<br>(123) 456-7890</p>
+                    <p>Address:<br>Cavite State University, Indang, Cavite</p>
+                </div>
             </div>
         </div>
         <hr>
-        <div class="footer-bottom">
-            
+        <div class="footer-bottom">  
             <p>&copy; 2026 Organization and Events Hub. All rights reserved.</p>
         </div>
 
     </footer>
 
 <script src="scripts/script.js"></script>
+<script src="scripts/loggedIn.js"></script>
+
 </body>
 </html>
