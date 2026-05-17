@@ -1,3 +1,19 @@
+const container = document.querySelector(".home-image-container, .body-container");
+const image = document.querySelector(".parallax-img");
+
+container.addEventListener("mousemove", (e) => {
+    const rect = container.getBoundingClientRect();
+
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    image.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+});
+
+container.addEventListener("mouseleave", () => {
+    image.style.transform = "translate(0, 0)";
+});
+
 function TogglePasswordVisibility() {
     const passwordInput = document.getElementById('password');
     const root = document.documentElement;

@@ -90,6 +90,11 @@
     border-radius: 100%;
 }
 
+#img1, #img2, #img3 {
+    filter: brightness(0);
+}
+
+
 .feature-box h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;

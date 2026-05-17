@@ -13,7 +13,7 @@ html {
 :root {
     --bg-color1: #faf8f5;
     --bg-color2: #eeeae5;
-    --bg-color3: #ece6df;
+    --bg-color3: #e9e1d9;
     --text-black: #111111;
     --text-black-light: #3f3f3f;
     --text-white: #faf8f5;
@@ -190,11 +190,11 @@ footer hr {
 }
 
 .footer-bottom {
-    background-color: #1b1b1b;
+    background-color: var(--bg-color1);
     padding: 20px 10%;
     display: flex;
     justify-content: center;
-    color: #b5b5b5;
+    color: var(--text-black-light);
 }
 
 
